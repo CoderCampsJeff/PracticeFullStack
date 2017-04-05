@@ -12,7 +12,10 @@ var Practice;
             };
             HomeController.prototype.save = function () {
                 var _this = this;
-                this.ProductResource.save(this.product).$promise.then(function () { _this.product = null; });
+                this.ProductResource.save(this.product).$promise.then(function () {
+                    _this.product = null;
+                    _this.getProducts();
+                });
             };
             return HomeController;
         }());

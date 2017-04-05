@@ -1,5 +1,19 @@
 ﻿<h1>Products</h1>
 
+<h3>Add Product</h3>
+<form ng-submit="vm.save()">
+    <label>
+        Product Name:
+        <input ng-model="vm.product.name" />
+    </label>
+    <label>
+        Product Price:
+        <input ng-model="vm.product.price" />
+    </label>
+    <input type="submit" value="Add" />
+</form>
+
+
 <ul>
     <li ng-repeat="product in vm.productList">{{product.name}} - {{product.price}}</li>
 </ul>

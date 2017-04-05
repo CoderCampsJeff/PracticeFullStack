@@ -10,8 +10,10 @@
         }
 
         public save() {
-            this.ProductResource.save(this.product).$promise.then(() =>
-            { this.product = null });
+            this.ProductResource.save(this.product).$promise.then(() => {
+                this.product = null;
+                this.getProducts();
+            });
         }
 
         constructor($resource: ng.resource.IResourceService) {
